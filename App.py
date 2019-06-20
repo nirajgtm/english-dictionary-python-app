@@ -32,5 +32,10 @@ def meaning(word):
 
 word = input ("Enter the word: ")
 
-for meanings in meaning(word.lower()):
-	print(meanings)
+result = meaning(word.lower())
+
+if type(result) == list:
+	for meanings in result:
+		print( "-- " + meanings)
+else:
+	print (result)
