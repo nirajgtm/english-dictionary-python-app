@@ -8,10 +8,10 @@ def meaning(word):
 	if word in data:
 		return data[word]
 
-	elif word.capitalize() in data:
+	elif word.capitalize() in data: #for proper nouns such as Nepal
 		return data[word.capitalize()]
 
-	elif word.upper() in data:
+	elif word.upper() in data:  #for acronyms such as USA
 		return data[word.upper()]
 
 		
