@@ -8,6 +8,12 @@ def meaning(word):
 	if word in data:
 		return data[word]
 
+	elif word.capitalize() in data:
+		return data[word.capitalize()]
+
+	elif word.upper() in data:
+		return data[word.upper()]
+
 		
 	elif get_close_matches(word, data.keys(), cutoff=0.6) !=  []:
 		match = get_close_matches(word, data.keys(), cutoff=0.6)
@@ -38,4 +44,4 @@ if type(result) == list:
 	for meanings in result:
 		print( "-- " + meanings)
 else:
-	print (result)
+	print (result) 
